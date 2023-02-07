@@ -1,0 +1,23 @@
+// @use '../util'; util.$fonts
+// @use '../util' as *; util.$fonts
+
+@use "../util" as u;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;  // setting base font 62.5% =>  100%  16 * 0.625 = 10px
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: u.$fonts;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
